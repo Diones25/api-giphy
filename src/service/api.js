@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const baseURL = "https://api.giphy.com/v1";
-const api_key = "GDt70km6IlESIWUxUiS8xGoy56h2QIOU";
+const api_key = "";
 const q = "cheeseburgers";
 const limit = 25;
 const offset = 5;
