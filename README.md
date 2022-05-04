@@ -1,4 +1,4 @@
-![img](./src/assets/giphy.png)
+![img](back-end/src/assets/giphy.png)
 ## API de consulta de gifs e stickers
 
 Esta API tem como finalidade retornar um JSON gifs e stickers do site [giphy](https://developers.giphy.com/), com esse dados e possivel criar um sistema de pesquisa de gifs ou stickers ou mesmo exibir diretamente os gifs na tela de acordo com o que o usuario desejar. 
