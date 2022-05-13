@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(90deg, rgba(161,140,209,1) 35%, rgba(251,194,235,1) 100%);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: davenvale;
+  src: url('./assets/fonts/davenvale/Davenvale\ DEMO.otf');
+}
+
+#davenvale {
+  font-family: davenvale;
+}
+
+#Link{
+  text-align: none;  
+}
+
+#BreadcrumbItem {
+  position: relative;
+  top: 5px;
+}
