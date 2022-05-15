@@ -31,6 +31,7 @@ const GifsSearch = () => {
       });
   }, []);
 
+
   return (
     <>
       <Container
