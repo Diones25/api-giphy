@@ -5,7 +5,10 @@ import {
     Col, 
     Row,  
     Card,
-    Breadcrumb 
+    Breadcrumb,
+    InputGroup,
+    FormControl,
+    Button  
 } from "react-bootstrap";
 import api from "../../../service/api.js";
 
@@ -57,6 +60,24 @@ const StickersSearch = () => {
       </Container>
 
       <h1 className="display-4 text-center mt-4" id="davenvale">Pesquisa de Stickers</h1>
+
+      <Container>
+        <Row>
+          <Col md={8} className="m-auto">
+            <InputGroup className="mb-3">
+              <FormControl
+                placeholder="Pesquisar Stickers"
+                aria-label="Pesquisar Stickers"
+                aria-describedby="basic-addon2"
+              />
+              <Button variant="outline-primary" id="button-addon2">
+                Pesquisar
+              </Button>
+            </InputGroup>
+          </Col>
+        </Row>
+      </Container>
+
       <Container>
         <Row>
           {stickersSearchSearch.map((item, index) => (

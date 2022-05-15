@@ -5,7 +5,10 @@ import {
     Col, 
     Row,  
     Card,
-    Breadcrumb 
+    Breadcrumb,
+    InputGroup,
+    FormControl,
+    Button 
 } from "react-bootstrap";
 import api from "../../../service/api.js";
 
@@ -45,7 +48,9 @@ const GifsTrending = () => {
             <Link to="/">Home</Link>
           </Breadcrumb.Item>
           <Breadcrumb.Item id="BreadcrumbItem">
-            <Link id="Link" to="/stickers/trending">Stickers Populares</Link>
+            <Link id="Link" to="/stickers/trending">
+              Stickers Populares
+            </Link>
           </Breadcrumb.Item>
           <Breadcrumb.Item id="BreadcrumbItem">
             <Link to="/gifs/search">Pesquisar Gifs</Link>
@@ -56,7 +61,27 @@ const GifsTrending = () => {
         </Breadcrumb>
       </Container>
 
-      <h1 className="display-4 text-center mt-4" id="davenvale">Pesquisa de Gifs</h1>
+      <h1 className="display-4 text-center mt-4" id="davenvale">
+        Pesquisa de Gifs
+      </h1>
+
+      <Container>
+        <Row>
+          <Col md={8} className="m-auto">
+            <InputGroup className="mb-3">
+              <FormControl
+                placeholder="Pesquisar Gifs"
+                aria-label="Pesquisar Gifs"
+                aria-describedby="basic-addon2"
+              />
+              <Button variant="outline-primary" id="button-addon2">
+                Pesquisar
+              </Button>
+            </InputGroup>
+          </Col>
+        </Row>
+      </Container>
+
       <Container>
         <Row>
           {gifsSearch.map((item, index) => (
