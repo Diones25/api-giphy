@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="mt-2 bg-light fixed-bottom">
         <Container fluid>
           <Row className="justify-content-between">
-            <Col xs="auto" className="text-black m-auto py-5">
+            <Col xs="auto" className="text-black m-auto py-3">
               {`© ${new Date().getFullYear()}. Todos os direitos reservados.`}
             </Col>
           </Row>

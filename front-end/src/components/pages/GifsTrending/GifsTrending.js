@@ -33,7 +33,7 @@ const GifsTrending = () => {
       <NavLinks />
 
       <h1 className="display-4 text-center mt-4" id="davenvale">Gifs Populares</h1>
-      <Container>
+      <Container className="mb-5 pb-5">
         <Row>
           {gifs.map((item, index) => (
             <Col key={index} className="my-2" lg={3} md={4} sm={6}>

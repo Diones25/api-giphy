@@ -37,7 +37,7 @@ const StickersSearch = () => {
 
       <h1 className="display-4 text-center mt-4" id="davenvale">Pesquisa de Stickers</h1>
 
-      <Container>
+      <Container className="mb-5 pb-5">
         <Row>
           <Col md={8} className="m-auto">
             <InputGroup className="mb-3">
