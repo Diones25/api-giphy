@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { 
     Container, 
     Col, 
     Row,  
     Card,
-    Breadcrumb 
 } from "react-bootstrap";
 import api from "../../../service/api.js";
 
 import "../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import '../../../index.css';
+
+import NavLinks from '../../NavLinks/NavLinks.js';
 
 const GifsTrending = () => {
   const [gifs, setGifs] = useState([]);
@@ -30,31 +30,7 @@ const GifsTrending = () => {
 
   return (
     <>
-      <Container
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Breadcrumb
-          className="border rounded px-4 py-2 borderColor"
-          style={{ backgroundColor: "#ecf0f1" }}
-        >
-          <Breadcrumb.Item id="BreadcrumbItem">
-            <Link to="/">Home</Link>
-          </Breadcrumb.Item>
-          <Breadcrumb.Item id="BreadcrumbItem">
-            <Link id="Link" to="/stickers/trending">Stickers Populares</Link>
-          </Breadcrumb.Item>
-          <Breadcrumb.Item id="BreadcrumbItem">
-            <Link to="/gifs/search">Pesquisar Gifs</Link>
-          </Breadcrumb.Item>
-          <Breadcrumb.Item id="BreadcrumbItem">
-            <Link to="/stickers/search">Pesquisar Stickers</Link>
-          </Breadcrumb.Item>
-        </Breadcrumb>
-      </Container>
+      <NavLinks />
 
       <h1 className="display-4 text-center mt-4" id="davenvale">Gifs Populares</h1>
       <Container>
