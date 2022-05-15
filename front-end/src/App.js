@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import GifsTrending from "./components/pages/GifsTrending/GifsTrending.js";
@@ -11,19 +11,19 @@ import img from './assets/img/Giphy.jpg';
 function App() {
   return (
     <>
-      <div class="container py-4">
-        <div class="p-5 mb-4 bg-light rounded-3">
-          <div class="container-fluid py-5">
-            <div class="row">
-              <div class="col-md-6">
-                <h1 class="display-5 fw-bold">Front-End API GIPHY</h1>
+      <div className="container py-4">
+        <div className="p-5 mb-4 bg-light rounded-3">
+          <div className="container-fluid py-5">
+            <div className="row">
+              <div className="col-md-6">
+                <h1 className="display-5 fw-bold">Front-End API GIPHY</h1>
                 <p>
                   Front-End da API GIPHY criado por mim disponivel nesse{" "}
                   <a href="https://github.com/Diones25/api-giphy">link</a>
                 </p>
               </div>
-              <div class="col-md-6">
-                <img src={img} class="img-fluid img-thumbnail" alt="..." />
+              <div className="col-md-6">
+                <img src={img} className="img-fluid img-thumbnail" alt="..." />
               </div>
             </div>
           </div>
@@ -38,6 +38,8 @@ function App() {
           <Route path="/stickers/search" element={<StickersSearch />} />
         </Routes>
       </Router>
+      
+
     </>
   );
 }
