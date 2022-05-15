@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const baseURL = "https://api.giphy.com/v1";
-const api_key = "";
+const api_key = "GDt70km6IlESIWUxUiS8xGoy56h2QIOU";
 const q = "susto"; //Esse parâmetro é que diz qual tipo de gif deve aparecer que desse caso é "susto"
 const limit = 25;
 const offset = 5;
