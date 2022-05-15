@@ -12,7 +12,7 @@ const api = axios.create({
     baseURL: baseURL,
     params: {
         api_key: api_key,
-        q: q,
+        //q: q,
         limit: limit,
         offset: offset,
         rating: rating,
