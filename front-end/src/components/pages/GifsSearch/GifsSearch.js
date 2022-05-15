@@ -21,7 +21,7 @@ const GifsSearch = () => {
 
   useEffect(() => {
     api
-      .get("/gifs/trending")
+      
       .then((response) => {
         console.log(response.data.data);
         setGifsSearch(response.data.data);
@@ -30,36 +30,7 @@ const GifsSearch = () => {
         console.log(err);
       });
   }, []);
-
-    return (
-      <>
-        <Container
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Breadcrumb
-            className="border rounded px-4 py-2 borderColor"
-            style={{ backgroundColor: "#ecf0f1" }}
-          >
-            <Breadcrumb.Item id="BreadcrumbItem">
-              <Link to="/" style={{ textDecoration: "none", color: "#000" }}>
-                Home
-              </Link>
-            </Breadcrumb.Item>
-            <Breadcrumb.Item id="BreadcrumbItem">
-              <Link to="/stickers/trending">Stickers Populares</Link>
-            </Breadcrumb.Item>
-            <Breadcrumb.Item id="BreadcrumbItem">
-              <Link to="/gifs/search">Pesquisar Gifs</Link>
-            </Breadcrumb.Item>
-            <Breadcrumb.Item id="BreadcrumbItem">
-              <Link to="/stickers/search">Pesquisar Stickers</Link>
-            </Breadcrumb.Item>
-          </Breadcrumb>
-        </Container>
+    
 
         <h1 className="display-4 text-center mt-4" id="davenvale">
           Pesquisa de Gifs
