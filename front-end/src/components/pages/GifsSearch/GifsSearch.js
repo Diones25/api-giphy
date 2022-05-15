@@ -15,7 +15,6 @@ import "../../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import '../../../index.css';
 
 import NavLinks from '../../NavLinks/NavLinks.js';
-import AppContainer from '../../AppContainer/AppContainer.js';
 
 const GifsTrending = () => {
   const [gifsSearch, setGifsSearch] = useState([]);
@@ -56,31 +55,29 @@ const GifsTrending = () => {
           </Col>
         </Row>
       </Container>
-
-      <AppContainer>
-        <Container>
-          <Row>
-            {gifsSearch.map((item, index) => (
-              <Col key={index} className="my-2" lg={3} md={4} sm={6}>
-                <Card
+      
+      <Container>
+        <Row>
+          {gifsSearch.map((item, index) => (
+            <Col key={index} className="my-2" lg={3} md={4} sm={6}>
+              <Card
+                style={{ height: "100%" }}
+                className=" shadow-lg p-1 bg-light rounded"
+              >
+                <Card.Img
                   style={{ height: "100%" }}
-                  className=" shadow-lg p-1 bg-light rounded"
-                >
-                  <Card.Img
-                    style={{ height: "100%" }}
-                    variant="top"
-                    src={item.images.original.url}
-                  />
-                  <Card.Body className="bg-white">
-                    <Card.Title className="bg-white">{item.username}</Card.Title>
-                    <Card.Text className="bg-white">{item.title}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>        
-      </AppContainer>
+                  variant="top"
+                  src={item.images.original.url}
+                />
+                <Card.Body className="bg-white">
+                  <Card.Title className="bg-white">{item.username}</Card.Title>
+                  <Card.Text className="bg-white">{item.title}</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>             
     </>
   );
 };

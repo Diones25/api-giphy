@@ -1,10 +1,12 @@
 import { Container, Row, Col } from "react-bootstrap";
 import "../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
+import '../../index.css';
 
 const Footer = () => {
   return (
     <>
+      <div id="Footer"></div>
       <div className="mt-2 bg-light fixed-bottom">
         <Container fluid>
           <Row className="justify-content-between">
