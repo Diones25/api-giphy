@@ -12,9 +12,19 @@ import "../../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import '../../../index.css';
 
 import NavLinks from '../../NavLinks/NavLinks.js';
+import { css } from "@emotion/react";
+import PacmanLoader from "react-spinners/PacmanLoader";
+
+// Can be a string as well. Need to ensure each key-value pair ends with ;
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
 
 const GifsTrending = () => {
   const [gifs, setGifs] = useState([]);
+  let [loading, setLoading] = useState(true);
 
   useEffect(() => {
     api
@@ -22,6 +32,7 @@ const GifsTrending = () => {
       .then((response) => {
         console.log(response.data.data);
         setGifs(response.data.data);
+        setLoading(false)
       })
       .catch((err) => {
         console.log(err);
@@ -32,7 +43,17 @@ const GifsTrending = () => {
     <>
       <NavLinks />
 
-      <h1 className="display-4 text-center mt-4" id="davenvale">Gifs Populares</h1>
+      <h1 className="display-4 text-center mt-4" id="davenvale">
+        Gifs Populares
+      </h1>
+
+      {loading && (
+        <>
+          <div className="sweet-loading">
+            <PacmanLoader color="#e74c3c" css={override} size={80} />
+          </div>
+        </>
+      )}
 
       <Container className="mb-5 pb-5">
         <Row>
@@ -56,7 +77,6 @@ const GifsTrending = () => {
           ))}
         </Row>
       </Container>
-
     </>
   );
 };
