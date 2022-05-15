@@ -18,7 +18,7 @@ const StickersSearch = () => {
 
   useEffect(() => {
     api
-      .get("/gifs/search")
+      .get("/stickers/search")
       .then((response) => {
         console.log(response.data.data);
         setStickersSearch(response.data.data);
