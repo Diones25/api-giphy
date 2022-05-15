@@ -5,7 +5,7 @@ import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 const Footer = () => {
   return (
     <>
-      <div className="mt-2 bg-light">
+      <div className="mt-2 bg-light fixed-bottom">
         <Container fluid>
           <Row className="justify-content-between">
             <Col xs="auto" className="text-black m-auto py-5">
