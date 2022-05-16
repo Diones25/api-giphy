@@ -13,11 +13,20 @@ import api from "../../../service/api.js";
 import "../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import '../../../index.css';
-
 import NavLinks from '../../NavLinks/NavLinks.js';
+
+import { css } from "@emotion/react";
+import PacmanLoader from "react-spinners/PacmanLoader";
+
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
 
 const StickersSearch = () => {
   const [stickersSearchSearch, setStickersSearch] = useState([]);
+  let [loading, setLoading] = useState(true);
 
   useEffect(() => {
     api
@@ -25,6 +34,7 @@ const StickersSearch = () => {
       .then((response) => {
         console.log(response.data.data);
         setStickersSearch(response.data.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -53,6 +63,14 @@ const StickersSearch = () => {
           </Col>
         </Row>
       </Container>
+
+      {loading && (
+        <>
+          <div className="sweet-loading" style={{ position: "relative", top: "40px" }}>
+            <PacmanLoader color="#e74c3c" css={override} size={80} />
+          </div>
+        </>
+      )}
 
       <Container>
         <Row>

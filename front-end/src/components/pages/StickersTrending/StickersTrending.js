@@ -9,11 +9,20 @@ import api from "../../../service/api.js";
 
 import "../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
 import "../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-
 import NavLinks from '../../NavLinks/NavLinks.js';
+
+import { css } from "@emotion/react";
+import PacmanLoader from "react-spinners/PacmanLoader";
+
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
 
 const StickersTrending = () => {
   const [stickers, setStickers] = useState([]);
+  let [loading, setLoading] = useState(true);
 
   useEffect(() => {
     api
@@ -21,6 +30,7 @@ const StickersTrending = () => {
       .then((response) => {
         console.log(response.data.data);
         setStickers(response.data.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -32,6 +42,14 @@ const StickersTrending = () => {
       <NavLinks />
       
       <h1 className="display-4 text-center mt-4" id="davenvale">Stickers Populares</h1>
+
+      {loading && (
+        <>
+          <div className="sweet-loading" style={{ position: "relative", top: "40px" }}>
+            <PacmanLoader color="#e74c3c" css={override} size={80} />
+          </div>
+        </>
+      )}
 
       <Container className="mb-5 pb-5">
         <Row>

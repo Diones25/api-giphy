@@ -15,7 +15,6 @@ import NavLinks from '../../NavLinks/NavLinks.js';
 import { css } from "@emotion/react";
 import PacmanLoader from "react-spinners/PacmanLoader";
 
-// Can be a string as well. Need to ensure each key-value pair ends with ;
 const override = css`
   display: block;
   margin: 0 auto;
@@ -32,7 +31,7 @@ const GifsTrending = () => {
       .then((response) => {
         console.log(response.data.data);
         setGifs(response.data.data);
-        setLoading(false)
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -49,7 +48,7 @@ const GifsTrending = () => {
 
       {loading && (
         <>
-          <div className="sweet-loading">
+          <div className="sweet-loading" style={{ position: "relative", top: "40px" }}>
             <PacmanLoader color="#e74c3c" css={override} size={80} />
           </div>
         </>
