@@ -156,6 +156,18 @@ Para rodar o projeto deve ter instalado o Node JS e o NPM e rodar os comandos ab
             "images": { ........
 ````
 
+## Telas do Front-End
+Abaixo estão as telas implementadas no front-end com React JS para consumir a API:
+
+#### Tela de Gifs populares
+![img](back-end/src/assets/gifs-trending.gif)
+
+#### Tela de Stickers populares
+![img](back-end/src/assets/stickers-trending.gif)
+
+#### Tela de pesquisa de Gifs
+![img](back-end/src/assets/pesquisa-de-gifs.gif)
+
 ## Stack utilizada
 
 **Back-end:** Node, Express, Axios, Cors <br/>
