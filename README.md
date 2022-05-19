@@ -158,7 +158,7 @@ Para rodar o projeto deve ter instalado o Node JS e o NPM e rodar os comandos ab
 
 ## Stack utilizada
 
-**Back-end:** Node, Express, Axios, Cors
+**Back-end:** Node, Express, Axios, Cors <br/>
 **Front-end:** React, React Bootstrap, Axios, React Spinners
 
 ## 🚀 Sobre mim
