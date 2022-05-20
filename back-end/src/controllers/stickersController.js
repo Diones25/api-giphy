@@ -1,4 +1,4 @@
-const api = require('../service/api.js');
+import api from '../service/api.js';
 
 const getTrendingStickers = async (req, res) => {
     await api.get("/stickers/trending").then((response) => {
@@ -20,7 +20,7 @@ const getStickersSearch = async (req, res) => {
     });
 }
 
-module.exports = {
+export default {
     getStickersSearch,
     getTrendingStickers
 }

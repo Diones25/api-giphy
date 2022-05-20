@@ -1,4 +1,4 @@
-const api = require('../service/api.js');
+import api from '../service/api.js';
 
 const getTrendingGifs = async (req, res) => {
     await api.get("/gifs/trending").then((response) => {
@@ -20,7 +20,7 @@ const getGifSearch = async (req, res) => {
     });
 }
 
-module.exports = {
+export default {
     getGifSearch,
     getTrendingGifs    
 }
